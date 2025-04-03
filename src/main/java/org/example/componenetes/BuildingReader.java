@@ -30,9 +30,8 @@ public class BuildingReader implements Reade<Building> {
         int zipcode = askZipcode();
         int size = scanner.nextInt();
         scanner.nextLine();
-        List<Apartament> apartamentList = new ArrayList<>(size);{
-
-        }
+        List<Apartament> apartamentList = new ArrayList<>(size);
+        // falta el fori
         return new Building(address,municipality,zipcode ,apartamentList);
     }
 
