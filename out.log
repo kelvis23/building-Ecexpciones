@@ -1,3 +1,22 @@
 2025-04-03 10:58:53 INFO  org.example.componenetes.BuildingReader:43 - introduce el codigo postal
 2025-04-03 10:59:01 ERROR org.example.componenetes.BuildingReader:46 - el valor introducido  no cumple lo requisitos
 2025-04-03 10:59:01 INFO  org.example.componenetes.BuildingReader:43 - introduce el codigo postal
+2025-04-04 12:50:53 INFO  org.example.componenetes.BuildingReader:46 - introduce el codigo postal
+2025-04-04 12:51:13 INFO  org.example.componenetes.BuildingReader:46 - introduce el codigo postal
+2025-04-04 12:52:43 INFO  org.example.componenetes.BuildingReader:43 - introduce el codigo postal
+2025-04-04 12:53:49 INFO  org.example.componenetes.BuildingReader:43 - introduce el codigo postal
+2025-04-04 12:53:52 ERROR org.example.componenetes.BuildingReader:47 - el valor introducido  no cumple lo requisitos
+2025-04-04 12:53:52 INFO  org.example.componenetes.BuildingReader:43 - introduce el codigo postal
+2025-04-04 12:57:19 INFO  org.example.componenetes.BuildingReader:46 - introduce el codigo postal
+2025-04-04 12:58:32 INFO  org.example.componenetes.BuildingReader:47 - introduce el codigo postal
+2025-04-04 12:59:54 INFO  org.example.componenetes.BuildingReader:47 - introduce el codigo postal
+2025-04-04 13:04:36 INFO  org.example.componenetes.BuildingReader:47 - introduce el codigo postal
+2025-04-04 13:06:27 INFO  org.example.componenetes.BuildingReader:42 - introduce el codigo postal
+2025-04-04 13:06:28 INFO  org.example.componenetes.ApartamentReader:46 - introduce la planta
+2025-04-04 13:08:57 INFO  org.example.componenetes.BuildingReader:43 - introduce el codigo postal
+2025-04-04 13:09:42 INFO  org.example.componenetes.BuildingReader:41 - introduce el codigo postal
+2025-04-04 13:09:45 INFO  org.example.componenetes.ApartamentReader:46 - introduce la planta
+2025-04-04 13:26:51 INFO  org.example.componenetes.BuildingReader:46 - introduce el codigo postal
+2025-04-04 13:26:56 INFO  org.example.componenetes.ApartamentReader:46 - introduce la planta
+2025-04-04 13:27:17 INFO  org.example.componenetes.ApartamentReader:46 - introduce la planta
+2025-04-04 13:27:29 INFO  org.example.componenetes.ApartamentReader:46 - introduce la planta

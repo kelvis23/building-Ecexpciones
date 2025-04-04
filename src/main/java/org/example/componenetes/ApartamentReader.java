@@ -27,10 +27,10 @@ public class ApartamentReader implements Reade<Apartament> {
          int floor = askfloor();
         System.out.println("puerta");
         String door = scanner.nextLine();
-        System.out.println("numero de propietarios");
-        int size = scanner.nextInt();
-        scanner.nextLine();
-        List<Owner>ownerList = new ArrayList<>(size);
+        System.out.println("propietario");
+        List<Owner>ownerList = new ArrayList<>();
+            ownerList.add(ownerReader.read());
+
         return new Apartament(
                 floor,
                 door,

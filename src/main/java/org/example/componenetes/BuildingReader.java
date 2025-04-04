@@ -27,11 +27,15 @@ public class BuildingReader implements Reade<Building> {
         System.out.println("municipio");
         String municipality = scanner.nextLine();
         System.out.println("codigo postal");
-        int zipcode = askZipcode();
-        int size = scanner.nextInt();
+        int zipcode = askZipcode();;
+        System.out.println("introducir apartamentos");
+        int num = scanner.nextInt();
         scanner.nextLine();
-        List<Apartament> apartamentList = new ArrayList<>(size);
-        // falta el fori
+        System.out.println("apartamento");
+        List<Apartament> apartamentList = new ArrayList<>();
+        for (int i = 0; i < num; i++) {
+            apartamentList.add(apartamentReader.read());
+        }
         return new Building(address,municipality,zipcode ,apartamentList);
     }
 
