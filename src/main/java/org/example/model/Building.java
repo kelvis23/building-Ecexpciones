@@ -23,17 +23,14 @@ public class Building {
 
     public Apartament getApartment(int floor, String door) throws ApartmentNotFoundException {
         for (var apartament : apartamentList) {
-            if (apartament.getFloor() == floor) {
-                if (apartament.getDoor().equals(door)) {
-                    return apartament;
-                }
-            } else {
-                throw new ApartmentNotFoundException(floor, door);
+            if (apartament.getFloor() == floor && apartament.getDoor().equals(door)) {
+                return apartament;
             }
-        }
-        return null;
-    }
 
+
+        }
+        throw new ApartmentNotFoundException(floor, door);
+    }
     // getOwners(int floor, String door):
     // devuelve los propietarios del apartamento en esa planta y puerta.
     // Si no encuentra el apartamento, lanza la excepción ApartmentNotFoundException
@@ -41,15 +38,13 @@ public class Building {
     public List<Owner> getOwners(int floor, String door) throws ApartmentNotFoundException {
         List<Owner> owners = new ArrayList<>();
         for (var apartament : apartamentList) {
-            if (apartament.getFloor() == floor) {
-                if (apartament.getDoor().equals(door)) {
+            if (apartament.getFloor() == floor && apartament.getDoor().equals(door)) ;{
                     owners.addAll(apartament.getOwnerList());
-                }
+
+
             }
-            else {
-                throw new ApartmentNotFoundException(floor,door);
-            }
+
         }
-        return owners;
+        throw new ApartmentNotFoundException(floor, door);
     }
 }
