@@ -6,7 +6,6 @@ import lombok.extern.log4j.Log4j;
 import org.example.exception.ApartmentNotFoundException;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.List;
 
 @Log4j
@@ -26,8 +25,6 @@ public class Building {
             if (apartament.getFloor() == floor && apartament.getDoor().equals(door)) {
                 return apartament;
             }
-
-
         }
         throw new ApartmentNotFoundException(floor, door);
     }
@@ -36,12 +33,9 @@ public class Building {
     // Si no encuentra el apartamento, lanza la excepción ApartmentNotFoundException
 
     public List<Owner> getOwners(int floor, String door) throws ApartmentNotFoundException {
-        List<Owner> owners = new ArrayList<>();
         for (var apartament : apartamentList) {
-            if (apartament.getFloor() == floor && apartament.getDoor().equals(door)) ;{
-                    owners.addAll(apartament.getOwnerList());
-
-
+            if (apartament.getFloor() == floor && apartament.getDoor().equals(door)){
+                   return apartament.getOwnerList();
             }
 
         }
