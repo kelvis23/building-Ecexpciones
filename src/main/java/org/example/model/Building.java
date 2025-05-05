@@ -21,24 +21,31 @@ public class Building {
     //   Si no encuentra el apartamento, lanza la excepción ApartmentNotFoundException
 
     public Apartament getApartment(int floor, String door) throws ApartmentNotFoundException {
-        for (var apartament : apartamentList) {
-            if (apartament.getFloor() == floor && apartament.getDoor().equals(door)) {
-                return apartament;
-            }
-        }
-        throw new ApartmentNotFoundException(floor, door);
+        //    for (var apartament : apartamentList) {
+        //    if (apartament.getFloor() == floor && apartament.getDoor().equals(door)) {
+        //  return apartament;
+        //}
+        //}
+        //throw new ApartmentNotFoundException(floor, door);
+
+        return apartamentList.stream()
+                .filter(apartamet -> apartamet.getFloor() == floor && apartamet.getDoor().equals(door))
+                .findFirst()
+                .orElseThrow(()-> new ApartmentNotFoundException(floor,door));
     }
     // getOwners(int floor, String door):
     // devuelve los propietarios del apartamento en esa planta y puerta.
     // Si no encuentra el apartamento, lanza la excepción ApartmentNotFoundException
 
     public List<Owner> getOwners(int floor, String door) throws ApartmentNotFoundException {
-        for (var apartament : apartamentList) {
-            if (apartament.getFloor() == floor && apartament.getDoor().equals(door)){
-                   return apartament.getOwnerList();
-            }
+      //  for (var apartament : apartamentList) {
+        //    if (apartament.getFloor() == floor && apartament.getDoor().equals(door)) {
+          //      return apartament.getOwnerList();
+          //  }
 
-        }
-        throw new ApartmentNotFoundException(floor, door);
+        //}
+        //throw new ApartmentNotFoundException(floor, door);
+       return getApartment(floor,door)
+               .getOwnerList();
     }
 }
